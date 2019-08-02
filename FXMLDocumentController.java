@@ -36,16 +36,22 @@ public class FXMLDocumentController implements Initializable {
     
      @FXML
     private TextArea oldWords;
+    ArrayList<String> mylist = new ArrayList<String>();
+   
+  
     
+    String value;
     
-    ArrayList<String> mylist = new ArrayList<>();
-     String value =  (typeHere.getText()).toLowerCase();
+   
+     
     
     public void showPoints(){
+        
+        value =  (typeHere.getText()).toLowerCase();
        
         
         if((value.contains("a")||value.contains("e")||value.contains("i")||value.contains("o")|| 
-            value.contains("u")||value.contains("y"))&&((value.length()>= 2)&&(value.length()<= 8))) {
+            value.contains("u")||value.contains("y"))&&((value.length()>= 2)&&(value.length()<= 8))&&comparingWords()==true) {
        
         
         mylist.add(value);
@@ -81,20 +87,26 @@ public class FXMLDocumentController implements Initializable {
         
         
     }
-//    public boolean comparingWords(){
-//        
-//        for (int i=0; i<= mylist.size(); i++) {
-//            
-//        
-//            if(mylist.contains(value)){
-//                
-//                return false;
-//            }
-//           
-//        }
-//        return true;
-//        
-//        }
+    
+    /**
+     *
+     * @return
+     */
+    
+    public boolean comparingWords(){
+        
+        for (int i=0; i<= mylist.size(); i++) {
+            
+        
+            if(mylist.contains(value)){
+                
+                return false;
+            }
+           
+        }
+        return true;
+        
+        }
    
      
 //    @FXML
@@ -106,6 +118,7 @@ public class FXMLDocumentController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        
     }    
     
 }
