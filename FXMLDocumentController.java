@@ -32,11 +32,16 @@ public class FXMLDocumentController implements Initializable {
     private TextField typeHere;
     
     @FXML
+    private Button test;
+    
+    @FXML
     private TextField points;
     
      @FXML
     private TextArea oldWords;
+     
     ArrayList<String> mylist = new ArrayList<String>();
+    ArrayList<String> restrictWords = new ArrayList<String>();
    
   
     
@@ -47,17 +52,74 @@ public class FXMLDocumentController implements Initializable {
     
     public void showPoints(){
         
-        value =  (typeHere.getText()).toLowerCase();
-       
+        value =  (typeHere.getText()).toLowerCase();       
         
-        if((value.contains("a")||value.contains("e")||value.contains("i")||value.contains("o")|| 
+        if(((value.matches("^[a-zA+]"))||value.contains("a")||value.contains("e")||value.contains("i")||value.contains("o")|| 
             value.contains("u")||value.contains("y"))&&((value.length()>= 2)&&(value.length()<= 8))&&comparingWords()==true) {
        
         
         mylist.add(value);
+        
         String[] words = value.split("");
+            // restrictWords.add(Arrays.toString(words));
+            restrictWords.addAll(Arrays.asList(words));
+
         oldWords.setText(mylist.toString());
+       // oldWords.setText(restrictWords.toString());
         points.setText(Arrays.toString(words));
+        
+         int[] count = new int[255];
+ 
+		int length = restrictWords.size();
+ 
+		for (int i = 0; i < length; i++) {
+			count[restrictWords.toString().charAt(i)]++;
+		}
+ 
+		char[] ch = new char[restrictWords.size()];
+		for (int i = 0; i < length; i++) {
+			ch[i] = restrictWords.toString().charAt(i);
+			int find = 0;
+			for (int j = 0; j <= i; j++) {
+				if (restrictWords.toString().charAt(i) == ch[j])
+					find++;
+			}
+ 
+			if (find == 1) {
+                                
+                                char character = restrictWords.toString().charAt(i);
+				 int wordCount = count[restrictWords.toString().charAt(i)];
+                                 
+                              //  oldWords.setText("character:"+character+"."+"count:"+wordCount);
+                                System.out.println("character:"+character+"."+"count:"+wordCount);
+                                 
+                                 
+                                 if(wordCount>3 && character == 'a'){
+                                     
+                                      Stage dialog = new Stage();
+                dialog.initModality(Modality.APPLICATION_MODAL);
+                dialog.setTitle("TestRun");
+                dialog.setMinHeight(300);
+                dialog.setMinWidth(300);
+                Label label = new Label();
+                label.setText("ALERT");
+                Button closeButton = new Button("You have entered wrong input");
+                closeButton.setOnAction(e-> dialog.close());
+                VBox layout = new VBox(10);
+                layout.getChildren().addAll(label, closeButton);
+                layout.setAlignment(Pos.CENTER);
+                Scene scene = new Scene(layout);
+                dialog.setScene(scene);
+                dialog.showAndWait();
+                                     
+                                     
+                                 }
+			}
+		}
+                
+                
+    
+        
         }
         
        else {
@@ -107,6 +169,15 @@ public class FXMLDocumentController implements Initializable {
         return true;
         
         }
+    
+   
+        
+         
+       
+    
+    
+    
+    
    
      
 //    @FXML
