@@ -45,12 +45,9 @@ public class FXMLDocumentController implements Initializable {
    
   
     
-    String value;
+     String value;
      String newsome = "";
      String newsome2 = "";
-    
-   
-     
     
     public void showPoints(){
         
@@ -66,7 +63,7 @@ public class FXMLDocumentController implements Initializable {
             // restrictWords.add(Arrays.toString(words));
             restrictWords.addAll(Arrays.asList(words));
 
-        oldWords.setText(mylist.toString());
+        oldWords.setText(mylist.toString().replace("[","").replace("]",""));
        // oldWords.setText(restrictWords.toString());
         points.setText(Arrays.toString(words));
         
@@ -141,7 +138,7 @@ public class FXMLDocumentController implements Initializable {
                                      
                                      
                                  }
-                                oldWords.setText(mylist.toString());
+                                oldWords.setText(mylist.toString().replace("[","").replace("]",""));
 			}
 		}
                 
