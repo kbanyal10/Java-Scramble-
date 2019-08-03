@@ -5,6 +5,7 @@
  */
 package assignment2_200395834;
 
+import java.awt.event.KeyEvent;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -48,13 +49,21 @@ public class FXMLDocumentController implements Initializable {
      String value;
      String newsome = "";
      String newsome2 = "";
-    
+    int wordSum = 0;
     public void showPoints(){
+    
+//        double sum = 0;
+//for(int i = 0; i < m.size(); i++)
+//    sum += m.get(i);
+//return sum;
+
         
         value =  (typeHere.getText()).toLowerCase();       
         
         if(((value.matches("^[a-zA+]"))||value.contains("a")||value.contains("e")||value.contains("i")||value.contains("o")|| 
             value.contains("u")||value.contains("y"))&&((value.length()>= 2)&&(value.length()<= 8))&&comparingWords()==true) {
+            
+            
        
         
         mylist.add(value);
@@ -96,9 +105,158 @@ public class FXMLDocumentController implements Initializable {
                                  
                               //  oldWords.setText("character:"+character+"."+"count:"+wordCount);
                                 System.out.println("character:"+character+"."+"count:"+wordCount);
+                                
+                                 if((wordCount<=12 && character == 'e')||(wordCount<=9 && character == 'a')||(wordCount<=6 && (character == 'r'||character == 't'||character == 'n'))
+                                         ||(wordCount<=8 &&( character == 'o'||character == 'i'))||(wordCount<=6 && character == 'r')||(wordCount<=4 && (character == 's'||character == 'l'||character == 'd'||character == 'u'))
+                                         ||(wordCount<=3 && character == 'g')||(wordCount<=2 && (character == 'p'||character == 'm'||character == 'b'||character == 'h'
+                                         ||character == 'c'||character == 'w'||character == 'y'||character == 'f'||character == 'v'))||(wordCount<=1 && (character == 'k'||character == 'x'||character == 'z'
+                                         ||character == 'j'||character == 'q'))){
+                                     
+                                      for(int s= 0; s< newsome.length();s++)
+                                    {
+                                        char loop = newsome.charAt(s);
+                                        System.out.println(loop);
+                                        
+                                        switch(loop){
+                                            
+                                            
+                                            case 'a':
+                                                
+                                                wordSum = (1 + wordSum)*wordCount;
+                                                break;
+                                                
+                                            case 'b':
+                                                
+                                                 wordSum = (3 + wordSum)*wordCount; 
+                                                break;
+                                            case 'c':
+                                                
+                                                 wordSum = (3 + wordSum)*wordCount; 
+                                                break; 
+                                                
+                                            case 'd':
+                                                
+                                                 wordSum = (2 + wordSum)*wordCount; 
+                                                break;   
+                                                
+                                             case 'e':
+                                                
+                                                wordSum = (1 + wordSum)*wordCount;
+                                                break;
+                                                
+                                            case 'f':
+                                                
+                                                 wordSum = (4 + wordSum)*wordCount; 
+                                                break;
+                                            case 'g':
+                                                
+                                                 wordSum = (2 + wordSum)*wordCount; 
+                                                break; 
+                                                
+                                            case 'h':
+                                                
+                                                 wordSum = (4 + wordSum)*wordCount; 
+                                                break;   
+                                             
+                                             case 'i':
+                                                
+                                                wordSum = (1 + wordSum)*wordCount;
+                                                break;
+                                                
+                                            case 'j':
+                                                
+                                                 wordSum = (8 + wordSum)*wordCount; 
+                                                break;
+                                            case 'k':
+                                                
+                                                 wordSum = (5 + wordSum)*wordCount; 
+                                                break; 
+                                                
+                                            case 'l':
+                                                
+                                                 wordSum = (1 + wordSum)*wordCount; 
+                                                break;   
+                                                
+                                             case 'm':
+                                                
+                                                wordSum = (3 + wordSum)*wordCount;
+                                                break;
+                                                
+                                            case 'n':
+                                                
+                                                 wordSum = (1 + wordSum)*wordCount; 
+                                                break;
+                                            case 'o':
+                                                
+                                                 wordSum = (1 + wordSum)*wordCount; 
+                                                break; 
+                                                
+                                            case 'p':
+                                                
+                                                 wordSum = (3 + wordSum)*wordCount; 
+                                                break;   
+                                                
+                                             case 'q':
+                                                
+                                                wordSum = (10 + wordSum)*wordCount;
+                                                break;
+                                                
+                                            case 'r':
+                                                
+                                                 wordSum = (1 + wordSum)*wordCount; 
+                                                break;
+                                            case 's':
+                                                
+                                                 wordSum = (1 + wordSum)*wordCount; 
+                                                break; 
+                                                
+                                            case 't':
+                                                
+                                                 wordSum = (1 + wordSum)*wordCount; 
+                                                break;   
+                                                
+                                             case 'u':
+                                                
+                                                wordSum = (1 + wordSum)*wordCount;
+                                                break;
+                                                
+                                            case 'v':
+                                                
+                                                 wordSum = (4 + wordSum)*wordCount; 
+                                                break;
+                                            case 'w':
+                                                
+                                                 wordSum = (4 + wordSum)*wordCount; 
+                                                break; 
+                                                
+                                            case 'x':
+                                                
+                                                 wordSum = (8 + wordSum)*wordCount; 
+                                                break;       
+                                            
+                                             case 'y':
+                                                
+                                                 wordSum = (4 + wordSum)*wordCount; 
+                                                break; 
+                                                
+                                            case 'z':
+                                                
+                                                 wordSum = (10 + wordSum)*wordCount; 
+                                                break;      
+                                                
+                                            default:
+                                                break;
+                                        }
+                                        
+                                    }
+                                      System.out.println((wordSum));
+                                     
                                  
                                  
-                                if((wordCount>12 && character == 'e')||(wordCount>9 && character == 'a')||(wordCount>6 && (character == 'r'||character == 't'||character == 'n'))
+                                 }
+                                 
+                                 
+                               else if((wordCount>12 && character == 'e')||(wordCount>9 && character == 'a')||(wordCount>6 && (character == 'r'||character == 't'||character == 'n'))
                                          ||(wordCount>8 &&( character == 'o'||character == 'i'))||(wordCount>6 && character == 'r')||(wordCount>4 && (character == 's'||character == 'l'||character == 'd'||character == 'u'))
                                          ||(wordCount>3 && character == 'g')||(wordCount>2 && (character == 'p'||character == 'm'||character == 'b'||character == 'h'
                                          ||character == 'c'||character == 'w'||character == 'y'||character == 'f'||character == 'v'))||(wordCount>1 && (character == 'k'||character == 'x'||character == 'z'
@@ -117,6 +275,9 @@ public class FXMLDocumentController implements Initializable {
                                     }
                                     
                                     mylist.remove(mylist.size() - 1);
+                                    
+                                   
+                                    
                                     
                                      
                 Stage dialog = new Stage();
@@ -177,8 +338,14 @@ public class FXMLDocumentController implements Initializable {
     
     /**
      *
-     * @return
+     * @param event
      */
+//    
+//    public void sumManagement(KeyEvent event){
+//        
+//        System.out.println("WORKS");
+//    
+//    }
     
     public boolean comparingWords(){
         
