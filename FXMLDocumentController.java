@@ -46,6 +46,7 @@ public class FXMLDocumentController implements Initializable {
   
     
     String value;
+     String newsome = "";
     
    
      
@@ -73,22 +74,27 @@ public class FXMLDocumentController implements Initializable {
 		int length = restrictWords.size();
  
 		for (int i = 0; i < length; i++) {
-			count[restrictWords.toString().charAt(i)]++;
+                    newsome = restrictWords.toString();
+                    newsome = newsome.replace("[", "");
+                    newsome = newsome.replaceAll("]", "");
+                    newsome = newsome.replaceAll("\\s", "");
+                    newsome = newsome.replaceAll(",", "");
+			count[newsome.charAt(i)]++;
 		}
  
-		char[] ch = new char[restrictWords.size()];
+		char[] ch = new char[newsome.length()];
 		for (int i = 0; i < length; i++) {
-			ch[i] = restrictWords.toString().charAt(i);
+			ch[i] = newsome.charAt(i);
 			int find = 0;
 			for (int j = 0; j <= i; j++) {
-				if (restrictWords.toString().charAt(i) == ch[j])
+				if (newsome.charAt(i) == ch[j])
 					find++;
 			}
  
 			if (find == 1) {
                                 
-                                char character = restrictWords.toString().charAt(i);
-				 int wordCount = count[restrictWords.toString().charAt(i)];
+                                char character = newsome.charAt(i);
+				 int wordCount = count[newsome.charAt(i)];
                                  
                               //  oldWords.setText("character:"+character+"."+"count:"+wordCount);
                                 System.out.println("character:"+character+"."+"count:"+wordCount);
