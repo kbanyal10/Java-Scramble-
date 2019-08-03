@@ -47,6 +47,7 @@ public class FXMLDocumentController implements Initializable {
     
     String value;
      String newsome = "";
+     String newsome2 = "";
     
    
      
@@ -100,9 +101,28 @@ public class FXMLDocumentController implements Initializable {
                                 System.out.println("character:"+character+"."+"count:"+wordCount);
                                  
                                  
-                                 if(wordCount>3 && character == 'a'){
+                                if((wordCount>12 && character == 'e')||(wordCount>9 && character == 'a')||(wordCount>6 && (character == 'r'||character == 't'||character == 'n'))
+                                         ||(wordCount>8 &&( character == 'o'||character == 'i'))||(wordCount>6 && character == 'r')||(wordCount>4 && (character == 's'||character == 'l'||character == 'd'||character == 'u'))
+                                         ||(wordCount>3 && character == 'g')||(wordCount>2 && (character == 'p'||character == 'm'||character == 'b'||character == 'h'
+                                         ||character == 'c'||character == 'w'||character == 'y'||character == 'f'||character == 'v'))||(wordCount>1 && (character == 'k'||character == 'x'||character == 'z'
+                                         ||character == 'j'||character == 'q'))){
+                                    
+                                    
+                                     int length2 = (mylist.get(mylist.size() - 1)).length();
+ 
+                                    for(int l=1; l <= length2; l++){
+                                            restrictWords.remove(restrictWords.size() - l);
+                                        }
+                                    for (int k = 0; k < length2; k++) {
+                                        newsome2 = (mylist.get(mylist.size() - 1));
+                                        count[newsome2.charAt(k)]--;
+                                        System.out.println(newsome2);
+                                    }
+                                    
+                                    mylist.remove(mylist.size() - 1);
+                                    
                                      
-                                      Stage dialog = new Stage();
+                Stage dialog = new Stage();
                 dialog.initModality(Modality.APPLICATION_MODAL);
                 dialog.setTitle("TestRun");
                 dialog.setMinHeight(300);
@@ -117,9 +137,11 @@ public class FXMLDocumentController implements Initializable {
                 Scene scene = new Scene(layout);
                 dialog.setScene(scene);
                 dialog.showAndWait();
+              
                                      
                                      
                                  }
+                                oldWords.setText(mylist.toString());
 			}
 		}
                 
