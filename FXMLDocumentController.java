@@ -43,6 +43,8 @@ public class FXMLDocumentController implements Initializable {
      
     ArrayList<String> mylist = new ArrayList<String>();
     ArrayList<String> restrictWords = new ArrayList<String>();
+    ArrayList<Integer> sumOfWords = new ArrayList<Integer>();
+   
    
   
     
@@ -51,6 +53,7 @@ public class FXMLDocumentController implements Initializable {
      String newsome2 = "";
     int wordSum = 0;
     public void showPoints(){
+         sumOfWords.add(0);
     
 //        double sum = 0;
 //for(int i = 0; i < m.size(); i++)
@@ -106,157 +109,160 @@ public class FXMLDocumentController implements Initializable {
                               //  oldWords.setText("character:"+character+"."+"count:"+wordCount);
                                 System.out.println("character:"+character+"."+"count:"+wordCount);
                                 
-                                 if((wordCount<=12 && character == 'e')||(wordCount<=9 && character == 'a')||(wordCount<=6 && (character == 'r'||character == 't'||character == 'n'))
-                                         ||(wordCount<=8 &&( character == 'o'||character == 'i'))||(wordCount<=6 && character == 'r')||(wordCount<=4 && (character == 's'||character == 'l'||character == 'd'||character == 'u'))
-                                         ||(wordCount<=3 && character == 'g')||(wordCount<=2 && (character == 'p'||character == 'm'||character == 'b'||character == 'h'
-                                         ||character == 'c'||character == 'w'||character == 'y'||character == 'f'||character == 'v'))||(wordCount<=1 && (character == 'k'||character == 'x'||character == 'z'
-                                         ||character == 'j'||character == 'q'))){
+//                                 if((wordCount<=12 && character == 'e')||(wordCount<=9 && character == 'a')||(wordCount<=6 && (character == 'r'||character == 't'||character == 'n'))
+//                                         ||(wordCount<=8 &&( character == 'o'||character == 'i'))||(wordCount<=6 && character == 'r')||(wordCount<=4 && (character == 's'||character == 'l'||character == 'd'||character == 'u'))
+//                                         ||(wordCount<=3 && character == 'g')||(wordCount<=2 && (character == 'p'||character == 'm'||character == 'b'||character == 'h'
+//                                         ||character == 'c'||character == 'w'||character == 'y'||character == 'f'||character == 'v'))||(wordCount<=1 && (character == 'k'||character == 'x'||character == 'z'
+//                                         ||character == 'j'||character == 'q'))){
                                      
-                                      for(int s= 0; s< newsome.length();s++)
-                                    {
-                                        char loop = newsome.charAt(s);
-                                        System.out.println(loop);
-                                        
-                                        switch(loop){
-                                            
-                                            
-                                            case 'a':
-                                                
-                                                wordSum = (1 + wordSum)*wordCount;
-                                                break;
-                                                
-                                            case 'b':
-                                                
-                                                 wordSum = (3 + wordSum)*wordCount; 
-                                                break;
-                                            case 'c':
-                                                
-                                                 wordSum = (3 + wordSum)*wordCount; 
-                                                break; 
-                                                
-                                            case 'd':
-                                                
-                                                 wordSum = (2 + wordSum)*wordCount; 
-                                                break;   
-                                                
-                                             case 'e':
-                                                
-                                                wordSum = (1 + wordSum)*wordCount;
-                                                break;
-                                                
-                                            case 'f':
-                                                
-                                                 wordSum = (4 + wordSum)*wordCount; 
-                                                break;
-                                            case 'g':
-                                                
-                                                 wordSum = (2 + wordSum)*wordCount; 
-                                                break; 
-                                                
-                                            case 'h':
-                                                
-                                                 wordSum = (4 + wordSum)*wordCount; 
-                                                break;   
-                                             
-                                             case 'i':
-                                                
-                                                wordSum = (1 + wordSum)*wordCount;
-                                                break;
-                                                
-                                            case 'j':
-                                                
-                                                 wordSum = (8 + wordSum)*wordCount; 
-                                                break;
-                                            case 'k':
-                                                
-                                                 wordSum = (5 + wordSum)*wordCount; 
-                                                break; 
-                                                
-                                            case 'l':
-                                                
-                                                 wordSum = (1 + wordSum)*wordCount; 
-                                                break;   
-                                                
-                                             case 'm':
-                                                
-                                                wordSum = (3 + wordSum)*wordCount;
-                                                break;
-                                                
-                                            case 'n':
-                                                
-                                                 wordSum = (1 + wordSum)*wordCount; 
-                                                break;
-                                            case 'o':
-                                                
-                                                 wordSum = (1 + wordSum)*wordCount; 
-                                                break; 
-                                                
-                                            case 'p':
-                                                
-                                                 wordSum = (3 + wordSum)*wordCount; 
-                                                break;   
-                                                
-                                             case 'q':
-                                                
-                                                wordSum = (10 + wordSum)*wordCount;
-                                                break;
-                                                
-                                            case 'r':
-                                                
-                                                 wordSum = (1 + wordSum)*wordCount; 
-                                                break;
-                                            case 's':
-                                                
-                                                 wordSum = (1 + wordSum)*wordCount; 
-                                                break; 
-                                                
-                                            case 't':
-                                                
-                                                 wordSum = (1 + wordSum)*wordCount; 
-                                                break;   
-                                                
-                                             case 'u':
-                                                
-                                                wordSum = (1 + wordSum)*wordCount;
-                                                break;
-                                                
-                                            case 'v':
-                                                
-                                                 wordSum = (4 + wordSum)*wordCount; 
-                                                break;
-                                            case 'w':
-                                                
-                                                 wordSum = (4 + wordSum)*wordCount; 
-                                                break; 
-                                                
-                                            case 'x':
-                                                
-                                                 wordSum = (8 + wordSum)*wordCount; 
-                                                break;       
-                                            
-                                             case 'y':
-                                                
-                                                 wordSum = (4 + wordSum)*wordCount; 
-                                                break; 
-                                                
-                                            case 'z':
-                                                
-                                                 wordSum = (10 + wordSum)*wordCount; 
-                                                break;      
-                                                
-                                            default:
-                                                break;
-                                        }
-                                        
-                                    }
-                                      System.out.println((wordSum));
+//                                      for(int s= 0; s< newsome.length();s++)
+//                                    {
+//                                        char loop = newsome.charAt(s);
+//                                        System.out.println(loop);
+//                                        
+//                                        switch(loop){
+//                                            
+//                                            
+//                                            case 'a':
+//                                                
+//                                                wordSum = (1 + wordSum)*wordCount;
+//                                               // System.out.println(wordCount);
+//                                                break;
+//                                                
+//                                            case 'b':
+//                                                
+//                                                 wordSum = (3 + wordSum)*wordCount; 
+//                                                break;
+//                                            case 'c':
+//                                                
+//                                                 wordSum = (3 + wordSum)*wordCount; 
+//                                                break; 
+//                                                
+//                                            case 'd':
+//                                                
+//                                                 wordSum = (2 + wordSum)*wordCount; 
+//                                                break;   
+//                                                
+//                                             case 'e':
+//                                                
+//                                                wordSum = (1 + wordSum)*wordCount;
+//                                                break;
+//                                                
+//                                            case 'f':
+//                                                
+//                                                 wordSum = (4 + wordSum)*wordCount; 
+//                                                break;
+//                                            case 'g':
+//                                                
+//                                                 wordSum = (2 + wordSum)*wordCount; 
+//                                                break; 
+//                                                
+//                                            case 'h':
+//                                                
+//                                                 wordSum = (4 + wordSum)*wordCount; 
+//                                                break;   
+//                                             
+//                                             case 'i':
+//                                                
+//                                                wordSum = (1 + wordSum)*wordCount;
+//                                                break;
+//                                                
+//                                            case 'j':
+//                                                
+//                                                 wordSum = (8 + wordSum)*wordCount; 
+//                                                break;
+//                                            case 'k':
+//                                                
+//                                                 wordSum = (5 + wordSum)*wordCount; 
+//                                                break; 
+//                                                
+//                                            case 'l':
+//                                                
+//                                                 wordSum = (1 + wordSum)*wordCount; 
+//                                                break;   
+//                                                
+//                                             case 'm':
+//                                                
+//                                                wordSum = (3 + wordSum)*wordCount;
+//                                                break;
+//                                                
+//                                            case 'n':
+//                                                
+//                                                 wordSum = (1 + wordSum)*wordCount; 
+//                                                break;
+//                                            case 'o':
+//                                                
+//                                                 wordSum = (1 + wordSum)*wordCount; 
+//                                                break; 
+//                                                
+//                                            case 'p':
+//                                                
+//                                                 wordSum = (3 + wordSum)*wordCount; 
+//                                                break;   
+//                                                
+//                                             case 'q':
+//                                                
+//                                                wordSum = (10 + wordSum)*wordCount;
+//                                                break;
+//                                                
+//                                            case 'r':
+//                                                
+//                                                 wordSum = (1 + wordSum)*wordCount; 
+//                                                break;
+//                                            case 's':
+//                                                
+//                                                 wordSum = (1 + wordSum)*wordCount; 
+//                                                break; 
+//                                                
+//                                            case 't':
+//                                                
+//                                                 wordSum = (1 + wordSum)*wordCount; 
+//                                                break;   
+//                                                
+//                                             case 'u':
+//                                                
+//                                                wordSum = (1 + wordSum)*wordCount;
+//                                                break;
+//                                                
+//                                            case 'v':
+//                                                
+//                                                 wordSum = (4 + wordSum)*wordCount; 
+//                                                break;
+//                                            case 'w':
+//                                                
+//                                                 wordSum = (4 + wordSum)*wordCount; 
+//                                                break; 
+//                                                
+//                                            case 'x':
+//                                                
+//                                                 wordSum = (8 + wordSum)*wordCount; 
+//                                                break;       
+//                                            
+//                                             case 'y':
+//                                                
+//                                                 wordSum = (4 + wordSum)*wordCount; 
+//                                                break; 
+//                                                
+//                                            case 'z':
+//                                                
+//                                                 wordSum = (10 + wordSum)*wordCount; 
+//                                                break;      
+//                                                
+//                                            default:
+//                                                break;
+//                                        }
+//                                        
+//                                    }
+//                                      sumOfWords.add(wordSum);
+//                                     wordSum =  sumOfWords.get(sumOfWords.size()-1)+ wordSum;
+//                                      System.out.println((wordSum));
                                      
                                  
                                  
-                                 }
+                                //}
                                  
                                  
-                               else if((wordCount>12 && character == 'e')||(wordCount>9 && character == 'a')||(wordCount>6 && (character == 'r'||character == 't'||character == 'n'))
+                               if((wordCount>12 && character == 'e')||(wordCount>9 && character == 'a')||(wordCount>6 && (character == 'r'||character == 't'||character == 'n'))
                                          ||(wordCount>8 &&( character == 'o'||character == 'i'))||(wordCount>6 && character == 'r')||(wordCount>4 && (character == 's'||character == 'l'||character == 'd'||character == 'u'))
                                          ||(wordCount>3 && character == 'g')||(wordCount>2 && (character == 'p'||character == 'm'||character == 'b'||character == 'h'
                                          ||character == 'c'||character == 'w'||character == 'y'||character == 'f'||character == 'v'))||(wordCount>1 && (character == 'k'||character == 'x'||character == 'z'
@@ -274,11 +280,7 @@ public class FXMLDocumentController implements Initializable {
                                         System.out.println(newsome2);
                                     }
                                     
-                                    mylist.remove(mylist.size() - 1);
-                                    
-                                   
-                                    
-                                    
+                                    mylist.remove(mylist.size() - 1);          
                                      
                 Stage dialog = new Stage();
                 dialog.initModality(Modality.APPLICATION_MODAL);
@@ -299,6 +301,152 @@ public class FXMLDocumentController implements Initializable {
                                      
                                      
                                  }
+                               
+                                
+                                else{
+                                        for(int s= 0; s< restrictWords.size();s++)
+                                    {
+                                        String loop = restrictWords.get(s);
+                                        System.out.println(loop);
+                                        
+                                        switch(loop){
+                                            
+                                            
+                                            case "a":
+                                                
+                                                wordSum = (1 + wordSum);
+                                               // System.out.println(wordCount);
+                                                break;
+                                                
+                                            case "b":
+                                                
+                                                 wordSum = (3 + wordSum); 
+                                                break;
+                                            case "c":
+                                                
+                                                 wordSum = (3 + wordSum); 
+                                                break; 
+                                                
+                                            case "d":
+                                                
+                                                 wordSum = (2 + wordSum); 
+                                                break;   
+                                                
+                                             case "e":
+                                                
+                                                wordSum = (1 + wordSum);
+                                                break;
+                                                
+                                            case "f":
+                                                
+                                                 wordSum = (4 + wordSum); 
+                                                break;
+                                            case "g":
+                                                
+                                                 wordSum = (2 + wordSum); 
+                                                break; 
+                                                
+                                            case "h":
+                                                
+                                                 wordSum = (4 + wordSum); 
+                                                break;   
+                                             
+                                             case "i":
+                                                
+                                                wordSum = (1 + wordSum);
+                                                break;
+                                                
+                                            case "j":
+                                                
+                                                 wordSum = (8 + wordSum); 
+                                                break;
+                                            case "k":
+                                                
+                                                 wordSum = (5 + wordSum); 
+                                                break; 
+                                                
+                                            case "l":
+                                                
+                                                 wordSum = (1 + wordSum); 
+                                                break;   
+                                                
+                                             case "m":
+                                                
+                                                wordSum = (3 + wordSum);
+                                                break;
+                                                
+                                            case "n":
+                                                
+                                                 wordSum = (1 + wordSum); 
+                                                break;
+                                            case "o":
+                                                
+                                                 wordSum = (1 + wordSum); 
+                                                break; 
+                                                
+                                            case "p":
+                                                
+                                                 wordSum = (3 + wordSum); 
+                                                break;   
+                                                
+                                             case "q":
+                                                
+                                                wordSum = (10 + wordSum);
+                                                break;
+                                                
+                                            case "r":
+                                                
+                                                 wordSum = (1 + wordSum); 
+                                                break;
+                                            case "s":
+                                                
+                                                 wordSum = (1 + wordSum); 
+                                                break; 
+                                                
+                                            case "t":
+                                                
+                                                 wordSum = (1 + wordSum); 
+                                                break;   
+                                                
+                                             case "u":
+                                                
+                                                wordSum = (1 + wordSum);
+                                                break;
+                                                
+                                            case "v":
+                                                
+                                                 wordSum = (4 + wordSum); 
+                                                break;
+                                            case "w":
+                                                
+                                                 wordSum = (4 + wordSum); 
+                                                break; 
+                                                
+                                            case "x":
+                                                
+                                                 wordSum = (8 + wordSum); 
+                                                break;       
+                                            
+                                             case "y":
+                                                
+                                                 wordSum = (4 + wordSum); 
+                                                break; 
+                                                
+                                            case "z":
+                                                
+                                                 wordSum = (10 + wordSum); 
+                                                break;      
+                                                
+                                            default:
+                                                break;
+                                        }
+                                        
+                                    }
+                                       sumOfWords.add(wordSum);
+                                     wordSum =  sumOfWords.get(sumOfWords.size()-1)+ wordSum;
+                                      System.out.println((wordSum)/value.length());
+                                        
+                                        }
                                 oldWords.setText(mylist.toString().replace("[","").replace("]",""));
 			}
 		}
