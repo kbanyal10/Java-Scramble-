@@ -54,12 +54,6 @@ public class FXMLDocumentController implements Initializable {
     int wordSum = 0;
     public void showPoints(){
          sumOfWords.add(0);
-    
-//        double sum = 0;
-//for(int i = 0; i < m.size(); i++)
-//    sum += m.get(i);
-//return sum;
-
         
         value =  (typeHere.getText()).toLowerCase();       
         
@@ -304,9 +298,9 @@ public class FXMLDocumentController implements Initializable {
                                
                                 
                                 else{
-                                        for(int s= 0; s< restrictWords.size();s++)
-                                    {
-                                        String loop = restrictWords.get(s);
+//                                        for(int s= 0; s< restrictWords.size();s++)
+//                                    {
+                                        String loop = restrictWords.get(i);
                                         System.out.println(loop);
                                         
                                         switch(loop){
@@ -315,45 +309,53 @@ public class FXMLDocumentController implements Initializable {
                                             case "a":
                                                 
                                                 wordSum = (1 + wordSum);
-                                               // System.out.println(wordCount);
+                                               System.out.println("a"+wordSum);
                                                 break;
                                                 
                                             case "b":
                                                 
                                                  wordSum = (3 + wordSum); 
+                                                 System.out.println("b"+wordSum);
                                                 break;
                                             case "c":
                                                 
                                                  wordSum = (3 + wordSum); 
+                                                 System.out.println("c"+wordSum);
                                                 break; 
                                                 
                                             case "d":
                                                 
                                                  wordSum = (2 + wordSum); 
+                                                  System.out.println("d"+wordSum);
                                                 break;   
                                                 
                                              case "e":
                                                 
                                                 wordSum = (1 + wordSum);
+                                                 System.out.println("e"+wordSum);
                                                 break;
                                                 
                                             case "f":
                                                 
                                                  wordSum = (4 + wordSum); 
+                                                  System.out.println("f"+wordSum);
                                                 break;
                                             case "g":
                                                 
-                                                 wordSum = (2 + wordSum); 
+                                                 wordSum = (2 + wordSum);
+                                                  System.out.println("g"+wordSum);
                                                 break; 
                                                 
                                             case "h":
                                                 
                                                  wordSum = (4 + wordSum); 
+                                                  System.out.println("h"+wordSum);
                                                 break;   
                                              
                                              case "i":
                                                 
                                                 wordSum = (1 + wordSum);
+                                                 System.out.println("i"+wordSum);
                                                 break;
                                                 
                                             case "j":
@@ -440,15 +442,26 @@ public class FXMLDocumentController implements Initializable {
                                             default:
                                                 break;
                                         }
-                                        
-                                    }
-                                       sumOfWords.add(wordSum);
-                                     wordSum =  sumOfWords.get(sumOfWords.size()-1)+ wordSum;
-                                      System.out.println((wordSum)/value.length());
-                                        
-                                        }
+                                       
+                               //}
+                                    
+                                      //  wordSum = wordSum;
+                                       
+                                     sumOfWords.add(wordSum);
+                                     
+                                     System.out.println(sumOfWords);
+                                     System.out.println(wordSum);
+                                    
+                                     // System.out.println(sumOfWords);
+                                     //wordSum =  sumOfWords.get(sumOfWords.size()-1)+ wordSum;
+                                    /// System.out.println(wordSum);
+                                    // System.out.println(sumOfWords);
+                                    
+                               }
+                              
                                 oldWords.setText(mylist.toString().replace("[","").replace("]",""));
 			}
+                        
 		}
                 
                 
