@@ -48,132 +48,132 @@
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </padding>
          <children>
-            <Button mnemonicParsing="false" prefHeight="125.0" prefWidth="130.0" text="B&#10;3" GridPane.columnIndex="5" GridPane.rowIndex="3">
+            <Button fx:id="bButton" mnemonicParsing="false" prefHeight="125.0" prefWidth="130.0" text="B&#10;3" GridPane.columnIndex="5" GridPane.rowIndex="3">
                <padding>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </padding>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="46.0" prefWidth="130.0" text="W&#10;4" GridPane.columnIndex="1">
+            <Button fx:id="wButton" mnemonicParsing="false" prefHeight="46.0" prefWidth="130.0" text="W&#10;4" GridPane.columnIndex="1">
                <padding>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </padding>
             </Button>
-            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="56.0" prefWidth="130.0" text="E&#10;1" textAlignment="JUSTIFY" GridPane.columnIndex="2">
+            <Button fx:id="eButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="56.0" prefWidth="130.0" text="E&#10;1" textAlignment="JUSTIFY" GridPane.columnIndex="2">
                <padding>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </padding>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="130.0" text="V&#10;4" GridPane.columnIndex="4" GridPane.rowIndex="3">
+            <Button fx:id="vButton" mnemonicParsing="false" prefHeight="75.0" prefWidth="130.0" text="V&#10;4" GridPane.columnIndex="4" GridPane.rowIndex="3">
                <padding>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </padding>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="130.0" text="S&#10;1" GridPane.columnIndex="5" GridPane.rowIndex="1">
+            <Button fx:id="sButton" mnemonicParsing="false" prefHeight="60.0" prefWidth="130.0" text="S&#10;1" GridPane.columnIndex="5" GridPane.rowIndex="1">
                <padding>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </padding>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="66.0" prefWidth="130.0" text="A&#10;1" GridPane.columnIndex="4" GridPane.rowIndex="1">
+            <Button fx:id="aButton" mnemonicParsing="false" prefHeight="66.0" prefWidth="130.0" text="A&#10;1" GridPane.columnIndex="4" GridPane.rowIndex="1">
                <padding>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </padding>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="51.0" prefWidth="130.0" text="Y&#10;4" GridPane.columnIndex="5">
+            <Button fx:id="yButton" mnemonicParsing="false" prefHeight="51.0" prefWidth="130.0" text="Y&#10;4" GridPane.columnIndex="5">
                <padding>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </padding>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="130.0" text="T&#10;1" GridPane.columnIndex="4">
+            <Button fx:id="tButton" mnemonicParsing="false" prefHeight="49.0" prefWidth="130.0" text="T&#10;1" GridPane.columnIndex="4">
                <padding>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </padding>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="79.0" prefWidth="130.0" text="K&#10;5" GridPane.columnIndex="5" GridPane.rowIndex="2">
+            <Button fx:id="kButton" mnemonicParsing="false" prefHeight="79.0" prefWidth="130.0" text="K&#10;5" GridPane.columnIndex="5" GridPane.rowIndex="2">
                <padding>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </padding>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="104.0" prefWidth="130.0" text="C&#10;3" GridPane.columnIndex="3" GridPane.rowIndex="3">
+            <Button fx:id="cButton" mnemonicParsing="false" prefHeight="104.0" prefWidth="130.0" text="C&#10;3" GridPane.columnIndex="3" GridPane.rowIndex="3">
                <padding>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </padding>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="61.0" prefWidth="130.0" text="H&#10;4" GridPane.columnIndex="3" GridPane.rowIndex="2">
+            <Button fx:id="hButton" mnemonicParsing="false" prefHeight="61.0" prefWidth="130.0" text="H&#10;4" GridPane.columnIndex="3" GridPane.rowIndex="2">
                <padding>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </padding>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="62.0" prefWidth="130.0" text="P&#10;3" GridPane.columnIndex="3" GridPane.rowIndex="1">
+            <Button fx:id="pButton" mnemonicParsing="false" prefHeight="62.0" prefWidth="130.0" text="P&#10;3" GridPane.columnIndex="3" GridPane.rowIndex="1">
                <padding>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </padding>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="56.0" prefWidth="130.0" text="R&#10;1" GridPane.columnIndex="3">
+            <Button fx:id="rButton" mnemonicParsing="false" prefHeight="56.0" prefWidth="130.0" text="R&#10;1" GridPane.columnIndex="3">
                <padding>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </padding>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="66.0" prefWidth="130.0" text="J&#10;8" GridPane.columnIndex="4" GridPane.rowIndex="2">
+            <Button fx:id="jButton" mnemonicParsing="false" prefHeight="66.0" prefWidth="130.0" text="J&#10;8" GridPane.columnIndex="4" GridPane.rowIndex="2">
                <padding>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </padding>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="69.0" prefWidth="130.0" text="X&#10;8" GridPane.columnIndex="2" GridPane.rowIndex="3">
+            <Button mnemonicParsing="false" prefHeight="69.0" prefWidth="130.0" text="X&#10;8" GridPane.columnIndex="2" GridPane.rowIndex="3" fx:id="xButton">
                <padding>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </padding>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="61.0" prefWidth="130.0" text="G&#10;2" GridPane.columnIndex="2" GridPane.rowIndex="2">
+            <Button fx:id="gButton" mnemonicParsing="false" prefHeight="61.0" prefWidth="130.0" text="G&#10;2" GridPane.columnIndex="2" GridPane.rowIndex="2">
                <padding>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </padding>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="61.0" prefWidth="130.0" text="O&#10;1" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <Button fx:id="oButton" mnemonicParsing="false" prefHeight="61.0" prefWidth="130.0" text="O&#10;1" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <padding>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </padding>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="66.0" prefWidth="130.0" text="M&#10;3" GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <Button fx:id="mButton" mnemonicParsing="false" prefHeight="66.0" prefWidth="130.0" text="M&#10;3" GridPane.columnIndex="1" GridPane.rowIndex="4">
                <padding>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </padding>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="73.0" prefWidth="130.0" text="Z&#10;10" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <Button fx:id="zButton" mnemonicParsing="false" prefHeight="73.0" prefWidth="130.0" text="Z&#10;10" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <padding>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </padding>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="130.0" text="F&#10;4" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <Button fx:id="fButton" mnemonicParsing="false" prefHeight="71.0" prefWidth="130.0" text="F&#10;4" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <padding>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </padding>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="58.0" prefWidth="130.0" text="I&#10;1" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <Button fx:id="iButton" mnemonicParsing="false" prefHeight="58.0" prefWidth="130.0" text="I&#10;1" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <padding>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </padding>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="64.0" prefWidth="130.0" text="N&#10;1" GridPane.rowIndex="4">
+            <Button fx:id="nButton" mnemonicParsing="false" prefHeight="64.0" prefWidth="130.0" text="N&#10;1" GridPane.rowIndex="4">
                <padding>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </padding>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="73.0" prefWidth="130.0" text="L&#10;1" GridPane.rowIndex="3">
+            <Button fx:id="lButton" mnemonicParsing="false" prefHeight="73.0" prefWidth="130.0" text="L&#10;1" GridPane.rowIndex="3">
                <padding>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </padding>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="74.0" prefWidth="130.0" text="D&#10;2" GridPane.rowIndex="2">
+            <Button fx:id="dButton" mnemonicParsing="false" prefHeight="74.0" prefWidth="130.0" text="D&#10;2" GridPane.rowIndex="2">
                <padding>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </padding>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="64.0" prefWidth="130.0" text="U&#10;1" GridPane.rowIndex="1">
+            <Button fx:id="uButton" mnemonicParsing="false" prefHeight="64.0" prefWidth="130.0" text="U&#10;1" GridPane.rowIndex="1">
                <padding>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </padding>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="58.0" prefWidth="130.0" text="Q&#10;10&#10;">
+            <Button fx:id="qButton" mnemonicParsing="false" prefHeight="58.0" prefWidth="130.0" text="Q&#10;10&#10;">
                <padding>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </padding>

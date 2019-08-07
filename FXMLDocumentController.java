@@ -33,7 +33,63 @@ public class FXMLDocumentController implements Initializable {
     private TextField typeHere;
     
     @FXML
-    private Button test;
+    private Button aButton;
+    
+    @FXML
+    private Button bButton;
+    
+    @FXML
+    private Button cButton;
+    @FXML
+    private Button dButton;
+    @FXML
+    private Button eButton;
+    @FXML
+    private Button fButton;
+    @FXML
+    private Button gButton;
+    @FXML
+    private Button hButton;
+    @FXML
+    private Button iButton;
+    @FXML
+    private Button jButton;
+    @FXML
+    private Button kButton;
+    @FXML
+    private Button lButton;
+    
+        @FXML
+    private Button mButton;
+    
+    @FXML
+    private Button nButton;
+    
+    @FXML
+    private Button oButton;
+    @FXML
+    private Button pButton;
+    @FXML
+    private Button qButton;
+    @FXML
+    private Button rButton;
+    @FXML
+    private Button sButton;
+    @FXML
+    private Button tButton;
+    @FXML
+    private Button uButton;
+    @FXML
+    private Button vButton;
+    @FXML
+    private Button wButton;
+    @FXML
+    private Button xButton;
+     @FXML
+    private Button yButton;
+    @FXML
+    private Button zButton;
+    
     
     @FXML
     private TextField points;
@@ -124,7 +180,140 @@ public class FXMLDocumentController implements Initializable {
                                     }
                                     
                                     mylist.remove(mylist.size() - 1);          
-                                     
+                                   
+                                    //If conditions to disable the button
+
+                                    if(character== 'e' && wordCount>12 ){
+                            
+                                    eButton.setDisable(true);
+
+                                    }
+                                    if (character == 'a'&&wordCount>9){
+
+                                    aButton.setDisable(true);
+
+                                   }
+                                    if (character == 'r'&&wordCount>6){
+
+                                    rButton.setDisable(true);
+
+                                   }
+                                    if (character == 'o'&&wordCount>8){
+
+                                    oButton.setDisable(true);
+
+                                   }
+                                    if(character== 'i' && wordCount>8){
+                            
+                                    iButton.setDisable(true);
+
+                                    }
+                                    if (character == 't'&&wordCount>6){
+
+                                    tButton.setDisable(true);
+
+                                   }
+                                    if (character == 's'&&wordCount>4){
+
+                                    sButton.setDisable(true);
+
+                                   }
+                                    if (character == 'n'&&wordCount>6){
+
+                                    nButton.setDisable(true);
+
+                                   }
+                                    if(character== 'l' && wordCount>4){
+                            
+                                    lButton.setDisable(true);
+
+                                    }
+                                    if (character == 'd'&&wordCount>4){
+
+                                    dButton.setDisable(true);
+
+                                   }
+                                    if (character == 'u'&&wordCount>4){
+
+                                    uButton.setDisable(true);
+
+                                   }
+                                    if (character == 'g'&&wordCount>3){
+
+                                    gButton.setDisable(true);
+
+                                   }
+                                    if(character== 'p' && wordCount>2 ){
+                            
+                                    pButton.setDisable(true);
+
+                                    }
+                                    if (character == 'm'&&wordCount>2){
+
+                                    mButton.setDisable(true);
+
+                                   }
+                                    if (character == 'b'&&wordCount>2){
+
+                                    bButton.setDisable(true);
+
+                                   }
+                                    if (character == 'h'&&wordCount>2){
+
+                                    hButton.setDisable(true);
+
+                                   }
+                                    if(character== 'c' && wordCount>2){
+                            
+                                    cButton.setDisable(true);
+
+                                    }
+                                    if (character == 'w'&&wordCount>2){
+
+                                    wButton.setDisable(true);
+
+                                   }
+                                    if (character == 'y'&&wordCount>2){
+
+                                    yButton.setDisable(true);
+
+                                   }
+                                    if (character == 'f'&&wordCount>2){
+
+                                    fButton.setDisable(true);
+
+                                   }
+                                    if(character== 'v' && wordCount>2){
+                            
+                                    vButton.setDisable(true);
+
+                                    }
+                                    if (character == 'k'&&wordCount>1){
+
+                                    kButton.setDisable(true);
+
+                                   }
+                                    if (character == 'x'&&wordCount>1){
+
+                                    xButton.setDisable(true);
+
+                                   }
+                                    if (character == 'z'&&wordCount>1){
+
+                                    zButton.setDisable(true);
+
+                                   }
+                                    if (character == 'j'&&wordCount>1){
+
+                                    jButton.setDisable(true);
+
+                                   }
+                                    if (character == 'q'&&wordCount>1){
+
+                                    qButton.setDisable(true);
+
+                                   }
+                   
                 Stage dialog = new Stage();
                 dialog.initModality(Modality.APPLICATION_MODAL);
                 dialog.setTitle("TestRun");
@@ -141,8 +330,8 @@ public class FXMLDocumentController implements Initializable {
                 dialog.setScene(scene);
                 dialog.showAndWait();
                 typeHere.clear();
-              
-       
+                
+
                                 }
                                 else{
                                    
