@@ -111,6 +111,7 @@ public class FXMLDocumentController implements Initializable {
      String newsome = "";
      String newsome2 = "";
     int wordSum;
+    char character;
     public void showPoints(){
          
         value =  (typeHere.getText()).toLowerCase();     
@@ -118,11 +119,15 @@ public class FXMLDocumentController implements Initializable {
         
         if(((value.matches("^[a-zA+]"))||value.contains("a")||value.contains("e")||value.contains("i")||value.contains("o")|| 
             value.contains("u")||value.contains("y"))&&((value.length()>= 2)&&(value.length()<= 8))&&comparingWords()==true) {
+            
+            
 
         mylist.add(value);
         
         String[] words = value.split("");
             restrictWords.addAll(Arrays.asList(words));
+            
+            
 
         oldWords.setText(mylist.toString().replace("[","").replace("]",""));
        // oldWords.setText(restrictWords.toString());
@@ -151,12 +156,11 @@ public class FXMLDocumentController implements Initializable {
  
 			if (find == 1) {
                                 
-                                char character = newsome.charAt(i);
+                                character = newsome.charAt(i);
 				  wordCount = count[newsome.charAt(i)];
                                  
                                 System.out.println("character:"+character+"."+"count:"+wordCount);
                                 
-                                 
                                  
                                if((wordCount>12 && character == 'e')||(wordCount>9 && character == 'a')||(wordCount>6 && (character == 'r'||character == 't'||character == 'n'))
                                          ||(wordCount>8 &&( character == 'o'||character == 'i'))||(wordCount>6 && character == 'r')||(wordCount>4 && (character == 's'||character == 'l'||character == 'd'||character == 'u'))
@@ -381,12 +385,12 @@ public class FXMLDocumentController implements Initializable {
                    
                 Stage dialog = new Stage();
                 dialog.initModality(Modality.APPLICATION_MODAL);
-                dialog.setTitle("TestRun");
+                dialog.setTitle("Program-Running");
                 dialog.setMinHeight(300);
                 dialog.setMinWidth(300);
                 Label label = new Label();
-                label.setText("ALERT");
-                Button closeButton = new Button("You have entered wrong input");
+                label.setText("ALERT: You have entered wrong input");
+                Button closeButton = new Button("Try Again");
                 closeButton.setOnAction(e-> dialog.close());
                 VBox layout = new VBox(10);
                 layout.getChildren().addAll(label, closeButton);
@@ -429,12 +433,71 @@ public class FXMLDocumentController implements Initializable {
                 
                 System.out.println(finalSum);
                 points.setText(Integer.toString(finalSum));    
+                
+                if(restrictWords.size()==96){
+                    errorMessage.setText("only one letter remaining in bag");
+                    
+                 Stage dialog = new Stage();
+                dialog.initModality(Modality.APPLICATION_MODAL);
+                dialog.setTitle("Game Over");
+                dialog.setMinHeight(300);
+                dialog.setMinWidth(400);
+                Label label = new Label();
+                label.setText("only one letter remaining in bag");
+                Button closeButton = new Button("OK");
+                closeButton.setOnAction(e-> dialog.close());
+                VBox layout = new VBox(10);
+                layout.getChildren().addAll(label, closeButton);
+                layout.setAlignment(Pos.CENTER);
+                Scene scene = new Scene(layout);
+                dialog.setScene(scene);
+                dialog.showAndWait();
+
+                }
+                else if(restrictWords.size()==97){
+                    errorMessage.setText("No letters remaining in bag");
+                    
+                 Stage dialog = new Stage();
+                dialog.initModality(Modality.APPLICATION_MODAL);
+                dialog.setTitle("Game Over");
+                dialog.setMinHeight(300);
+                dialog.setMinWidth(400);
+                Label label = new Label();
+                label.setText("Game Over");
+                Button closeButton = new Button("OK");
+                closeButton.setOnAction(e-> dialog.close());
+                VBox layout = new VBox(10);
+                layout.getChildren().addAll(label, closeButton);
+                layout.setAlignment(Pos.CENTER);
+                Scene scene = new Scene(layout);
+                dialog.setScene(scene);
+                dialog.showAndWait();
+                }
+                else if((wordCount>12 && character == 'e')||(wordCount>9 && character == 'a')||(wordCount>8 &&( character == 'o'||character == 'i'))|| (wordCount>4 && character == 'u')){
+                     errorMessage.setText("Only Consonants Remaining");
+                    
+                 Stage dialog = new Stage();
+                dialog.initModality(Modality.APPLICATION_MODAL);
+                dialog.setTitle("Game Over");
+                dialog.setMinHeight(300);
+                dialog.setMinWidth(400);
+                Label label = new Label();
+                label.setText("No Vowels Remaining");
+                Button closeButton = new Button("OK");
+                closeButton.setOnAction(e-> dialog.close());
+                VBox layout = new VBox(10);
+                layout.getChildren().addAll(label, closeButton);
+                layout.setAlignment(Pos.CENTER);
+                Scene scene = new Scene(layout);
+                dialog.setScene(scene);
+                dialog.showAndWait();
+                }
 
         }
         
        else {   
             
-                errorMessage.setText("Word is too short");
+                
                 
 //                if(value.length()< 2){
 //                    
@@ -450,7 +513,7 @@ public class FXMLDocumentController implements Initializable {
                 dialog.initModality(Modality.APPLICATION_MODAL);
                 dialog.setTitle("Error Message");
                 dialog.setMinHeight(300);
-                dialog.setMinWidth(300);
+                dialog.setMinWidth(400);
                 Label label = new Label();
                 label.setText("Error: Word is Blank");
                 Button closeButton = new Button("Try Again");
@@ -469,7 +532,7 @@ public class FXMLDocumentController implements Initializable {
                 dialog.initModality(Modality.APPLICATION_MODAL);
                 dialog.setTitle("Error Message");
                 dialog.setMinHeight(300);
-                dialog.setMinWidth(300);
+                dialog.setMinWidth(400);
                 Label label = new Label();
                 label.setText("Error: Word is too short");
                 Button closeButton = new Button("Try Again");
@@ -489,7 +552,7 @@ public class FXMLDocumentController implements Initializable {
                 dialog.initModality(Modality.APPLICATION_MODAL);
                 dialog.setTitle("Error Message");
                 dialog.setMinHeight(300);
-                dialog.setMinWidth(300);
+                dialog.setMinWidth(400);
                 Label label = new Label();
                 label.setText("Error: Word is too long");
                 Button closeButton = new Button("Try Again");
@@ -512,7 +575,7 @@ public class FXMLDocumentController implements Initializable {
                 dialog.initModality(Modality.APPLICATION_MODAL);
                 dialog.setTitle("Error Message");
                 dialog.setMinHeight(300);
-                dialog.setMinWidth(300);
+                dialog.setMinWidth(400);
                 Label label = new Label();
                 label.setText("Error: Word does not include vowel");
                 Button closeButton = new Button("Try Again");
@@ -687,7 +750,7 @@ public class FXMLDocumentController implements Initializable {
                                        
                                      
                                      sumOfWords.add(wordSum);
-                                     typeHere.undo();
+                                     typeHere.clear();
                                     
     }return 2; 
     }
@@ -699,7 +762,27 @@ public class FXMLDocumentController implements Initializable {
         
             if(mylist.contains(value)){
                 
+                 errorMessage.setText("Error: Word Already Used");
+                
+                 
+                Stage dialog = new Stage();
+                dialog.initModality(Modality.APPLICATION_MODAL);
+                dialog.setTitle("Error Message");
+                dialog.setMinHeight(300);
+                dialog.setMinWidth(400);
+                Label label = new Label();
+                label.setText("Error: Word Already Used");
+                Button closeButton = new Button("Try Again");
+                closeButton.setOnAction(e-> dialog.close());
+                VBox layout = new VBox(10);
+                layout.getChildren().addAll(label, closeButton);
+                layout.setAlignment(Pos.CENTER);
+                Scene scene = new Scene(layout);
+                dialog.setScene(scene);
+                dialog.showAndWait();
+                typeHere.clear();
                 return false;
+                
             }
            
         }
