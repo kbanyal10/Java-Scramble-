@@ -113,7 +113,6 @@ public class FXMLDocumentController implements Initializable {
     int wordSum;
     public void showPoints(){
          
-        
         value =  (typeHere.getText()).toLowerCase();     
         errorMessage.setText("");
         
@@ -433,15 +432,28 @@ public class FXMLDocumentController implements Initializable {
 
         }
         
-       else {       
-                Stage dialog = new Stage();
+       else {   
+            
+                errorMessage.setText("Word is too short");
+                
+//                if(value.length()< 2){
+//                    
+//                    errorMessage.setText("Word is too short (only 1 character)");
+//                        
+//                        }
+    
+            String newValue = String.valueOf(value);
+            if(newValue.equals("")){
+                
+                errorMessage.setText("Error: Word is Blank");
+             Stage dialog = new Stage();
                 dialog.initModality(Modality.APPLICATION_MODAL);
-                dialog.setTitle("TestRun");
+                dialog.setTitle("Error Message");
                 dialog.setMinHeight(300);
                 dialog.setMinWidth(300);
                 Label label = new Label();
-                label.setText("ALERT");
-                Button closeButton = new Button("You have entered wrong input");
+                label.setText("Error: Word is Blank");
+                Button closeButton = new Button("Try Again");
                 closeButton.setOnAction(e-> dialog.close());
                 VBox layout = new VBox(10);
                 layout.getChildren().addAll(label, closeButton);
@@ -449,6 +461,77 @@ public class FXMLDocumentController implements Initializable {
                 Scene scene = new Scene(layout);
                 dialog.setScene(scene);
                 dialog.showAndWait();
+            }
+            else if(value.length()== 1){
+                
+                errorMessage.setText("Error: Word is too short");
+             Stage dialog = new Stage();
+                dialog.initModality(Modality.APPLICATION_MODAL);
+                dialog.setTitle("Error Message");
+                dialog.setMinHeight(300);
+                dialog.setMinWidth(300);
+                Label label = new Label();
+                label.setText("Error: Word is too short");
+                Button closeButton = new Button("Try Again");
+                closeButton.setOnAction(e-> dialog.close());
+                VBox layout = new VBox(10);
+                layout.getChildren().addAll(label, closeButton);
+                layout.setAlignment(Pos.CENTER);
+                Scene scene = new Scene(layout);
+                dialog.setScene(scene);
+                dialog.showAndWait();
+            }
+            
+            else if(value.length()>8){
+                
+                errorMessage.setText("Error: Word is too long");
+             Stage dialog = new Stage();
+                dialog.initModality(Modality.APPLICATION_MODAL);
+                dialog.setTitle("Error Message");
+                dialog.setMinHeight(300);
+                dialog.setMinWidth(300);
+                Label label = new Label();
+                label.setText("Error: Word is too long");
+                Button closeButton = new Button("Try Again");
+                closeButton.setOnAction(e-> dialog.close());
+                VBox layout = new VBox(10);
+                layout.getChildren().addAll(label, closeButton);
+                layout.setAlignment(Pos.CENTER);
+                Scene scene = new Scene(layout);
+                dialog.setScene(scene);
+                dialog.showAndWait();
+            }
+                
+           else if(!(value.contains("a")||value.contains("e")||value.contains("i")||value.contains("o")|| 
+            value.contains("u")||value.contains("y"))){
+                
+                errorMessage.setText("Error: Word does not include vowel");
+                
+                 
+                Stage dialog = new Stage();
+                dialog.initModality(Modality.APPLICATION_MODAL);
+                dialog.setTitle("Error Message");
+                dialog.setMinHeight(300);
+                dialog.setMinWidth(300);
+                Label label = new Label();
+                label.setText("Error: Word does not include vowel");
+                Button closeButton = new Button("Try Again");
+                closeButton.setOnAction(e-> dialog.close());
+                VBox layout = new VBox(10);
+                layout.getChildren().addAll(label, closeButton);
+                layout.setAlignment(Pos.CENTER);
+                Scene scene = new Scene(layout);
+                dialog.setScene(scene);
+                dialog.showAndWait();
+        }
+//            
+//            else if(value.contains("")){
+//                
+//                 errorMessage.setText("Word is blank");
+//            
+//            }
+            
+            
         }
 
     }
