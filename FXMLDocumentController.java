@@ -97,6 +97,9 @@ public class FXMLDocumentController implements Initializable {
      @FXML
     private TextArea oldWords;
      
+     @FXML
+    private TextArea errorMessage;
+     
     ArrayList<String> mylist = new ArrayList<String>();
     ArrayList<String> restrictWords = new ArrayList<String>();
     ArrayList<Integer> sumOfWords = new ArrayList<Integer>();
@@ -111,7 +114,8 @@ public class FXMLDocumentController implements Initializable {
     public void showPoints(){
          
         
-        value =  (typeHere.getText()).toLowerCase();       
+        value =  (typeHere.getText()).toLowerCase();     
+        errorMessage.setText("");
         
         if(((value.matches("^[a-zA+]"))||value.contains("a")||value.contains("e")||value.contains("i")||value.contains("o")|| 
             value.contains("u")||value.contains("y"))&&((value.length()>= 2)&&(value.length()<= 8))&&comparingWords()==true) {
@@ -171,7 +175,16 @@ public class FXMLDocumentController implements Initializable {
                                      int length2 = (mylist.get(mylist.size() - 1)).length();
  
                                     for(int l=1; l <= length2; l++){
+                                        if(restrictWords.size()>2){
                                             restrictWords.remove(restrictWords.size() - l);
+                                        }
+                                        else{
+                                            
+                                            //restrictWords.remove(restrictWords.size());
+                                            errorMessage.setText("Recheck input please");
+                                        }
+                                        
+                                        
                                         }
                                     for (int k = 0; k < length2; k++) {
                                         newsome2 = (mylist.get(mylist.size() - 1));
@@ -186,131 +199,184 @@ public class FXMLDocumentController implements Initializable {
                                     if(character== 'e' && wordCount>12 ){
                             
                                     eButton.setDisable(true);
+                                    
+                                    
+                                    errorMessage.setText("e is not available in bag");
 
                                     }
                                     if (character == 'a'&&wordCount>9){
 
                                     aButton.setDisable(true);
+                                    
+                                    errorMessage.setText("a is not available in bag");
 
                                    }
                                     if (character == 'r'&&wordCount>6){
 
                                     rButton.setDisable(true);
+                                    
+                                    errorMessage.setText("r is not available in bag");
 
                                    }
                                     if (character == 'o'&&wordCount>8){
 
                                     oButton.setDisable(true);
+                                    
+                                    errorMessage.setText("o is not available in bag");
 
                                    }
                                     if(character== 'i' && wordCount>8){
                             
                                     iButton.setDisable(true);
+                                    
+                                    errorMessage.setText("i is not available in bag");
 
                                     }
                                     if (character == 't'&&wordCount>6){
 
                                     tButton.setDisable(true);
+                                    
+                                    errorMessage.setText("t is not available in bag");
 
                                    }
                                     if (character == 's'&&wordCount>4){
 
                                     sButton.setDisable(true);
+                                    
+                                    errorMessage.setText("s is not available in bag");
 
                                    }
                                     if (character == 'n'&&wordCount>6){
 
                                     nButton.setDisable(true);
+                                    
+                                    errorMessage.setText("n is not available in bag");
 
                                    }
                                     if(character== 'l' && wordCount>4){
                             
                                     lButton.setDisable(true);
+                                    
+                                    errorMessage.setText("l is not available in bag");
 
                                     }
                                     if (character == 'd'&&wordCount>4){
 
                                     dButton.setDisable(true);
+                                    
+                                    errorMessage.setText("d is not available in bag");
 
                                    }
                                     if (character == 'u'&&wordCount>4){
 
                                     uButton.setDisable(true);
+                                    
+                                    errorMessage.setText("u is not available in bag");
 
                                    }
                                     if (character == 'g'&&wordCount>3){
 
                                     gButton.setDisable(true);
+                                    
+                                    errorMessage.setText("g is not available in bag");
 
                                    }
                                     if(character== 'p' && wordCount>2 ){
                             
                                     pButton.setDisable(true);
+                                    
+                                    errorMessage.setText("p is not available in bag");
 
                                     }
                                     if (character == 'm'&&wordCount>2){
 
                                     mButton.setDisable(true);
+                                    
+                                    errorMessage.setText("m is not available in bag");
 
                                    }
                                     if (character == 'b'&&wordCount>2){
 
                                     bButton.setDisable(true);
+                                    
+                                    errorMessage.setText("b is not available in bag");
 
                                    }
                                     if (character == 'h'&&wordCount>2){
 
                                     hButton.setDisable(true);
+                                    
+                                    errorMessage.setText("h is not available in bag");
 
                                    }
                                     if(character== 'c' && wordCount>2){
                             
                                     cButton.setDisable(true);
+                                    
+                                    errorMessage.setText("c is not available in bag");
 
                                     }
                                     if (character == 'w'&&wordCount>2){
 
                                     wButton.setDisable(true);
+                                    
+                                    errorMessage.setText("w is not available in bag");
 
                                    }
                                     if (character == 'y'&&wordCount>2){
 
                                     yButton.setDisable(true);
+                                    
+                                    errorMessage.setText("y is not available in bag");
 
                                    }
                                     if (character == 'f'&&wordCount>2){
 
                                     fButton.setDisable(true);
+                                    
+                                    errorMessage.setText("f is not available in bag");
 
                                    }
                                     if(character== 'v' && wordCount>2){
                             
                                     vButton.setDisable(true);
+                                    
+                                    errorMessage.setText("v is not available in bag");
 
                                     }
                                     if (character == 'k'&&wordCount>1){
 
                                     kButton.setDisable(true);
+                                    
+                                    errorMessage.setText("k is not available in bag");
 
                                    }
                                     if (character == 'x'&&wordCount>1){
 
                                     xButton.setDisable(true);
+                                    
+                                    errorMessage.setText("x is not available in bag");
 
                                    }
                                     if (character == 'z'&&wordCount>1){
 
                                     zButton.setDisable(true);
+                                    
+                                    errorMessage.setText("z is not available in bag");
 
                                    }
                                     if (character == 'j'&&wordCount>1){
 
                                     jButton.setDisable(true);
+                                    
+                                    errorMessage.setText("j is not available in bag");
 
                                    }
                                     if (character == 'q'&&wordCount>1){
 
                                     qButton.setDisable(true);
+                                    
+                                    errorMessage.setText("q is not available in bag");
 
                                    }
                    
